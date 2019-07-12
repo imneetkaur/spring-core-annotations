@@ -11,6 +11,14 @@ public class BeanConfig {
     @Bean(name = "movie")
     public Movie getMovie(){
         Movie movie=new Movie();
+        movie.setMovieName("Krish11");
+        movie.setGenre("Fantasy1");
+        movie.setActor(getActor());
+        return movie;
+    }
+    @Bean(name = "movie1")
+    public Movie getMovie1(){
+        Movie movie=new Movie();
         movie.setMovieName("Krish");
         movie.setGenre("Fantasy");
         movie.setActor(getActor());
@@ -24,4 +32,5 @@ public class BeanConfig {
         actor.setGender("Male");
         return actor;
     }
+    
 }

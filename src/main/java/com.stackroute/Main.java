@@ -17,10 +17,23 @@ import org.springframework.core.io.Resource;
 
 public class Main {
     public static void main(String[] args) {
+
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.register(BeanConfig.class);
         annotationConfigApplicationContext.refresh();
+
         Movie movie = (Movie) annotationConfigApplicationContext.getBean("movie");
         System.out.println(movie);
+
+        Movie movie1 = (Movie) annotationConfigApplicationContext.getBean("movie1");
+        System.out.println(movie1);
+
+        if(movie == movie1){
+            System.out.println(true);
+        }else{
+            System.out.println(false);
+        }
+
+
     }
 }
