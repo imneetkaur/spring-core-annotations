@@ -8,7 +8,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfig {
 
+    @Bean(name = "actor")
+    public Actor getActor() {
+        Actor actor = new Actor("Mahesh", "Male", 40);
+        return actor;
+    }
+
     @Bean(name = "movie")
+    public Movie getMovie() {
+
+        System.out.println(getActor());
+        Movie movie = new Movie("Krish","Fantasy",getActor());
+        return movie;
+    }
+
+
+
+   /* @Bean(name = "movie")
     public Movie getMovie(){
         Movie movie=new Movie();
         movie.setMovieName("Krish11");
@@ -31,6 +47,5 @@ public class BeanConfig {
         actor.setAge(40);
         actor.setGender("Male");
         return actor;
-    }
-    
+    }*/
 }

@@ -25,14 +25,14 @@ public class Main {
         Movie movie = (Movie) annotationConfigApplicationContext.getBean("movie");
         System.out.println(movie);
 
-        Movie movie1 = (Movie) annotationConfigApplicationContext.getBean("movie1");
-        System.out.println(movie1);
+        /*Movie movie1 = (Movie) annotationConfigApplicationContext.getBean("movie1");
+        System.out.println(movie1);*/
 
-        if(movie == movie1){
+       /* if(movie == movie1){
             System.out.println(true);
         }else{
             System.out.println(false);
-        }
+        }*/
 
 
     }

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+
 public class Movie {
     private String movieName;
     private String genre;
@@ -15,11 +15,12 @@ public class Movie {
         System.out.println("MOVIE");
     }
 
-    @Autowired
+
     public Movie(Actor actor)
     {
         this.actor=actor;
     }
+    @Autowired
     public Movie(String movieName, String genre,Actor actor) {
         this.movieName = movieName;
         this.genre = genre;
